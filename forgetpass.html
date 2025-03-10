@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reset Password</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body class="reset">
+    <div class="reset-container">
+<form action="login.html">
+
+        <h1>Reset Your Password</h1>
+        <p>Enter a new password and confirm it.</p>
+        <form>
+           
+<input type="password" id="password" name="password" placeholder="New Password" required oninput="confirmPassword.pattern = this.value">
+<input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password" required pattern=".{6,}">
+<button type="submit">Reset Password</button>
+        </form>
+    </div>
+</body>
+</html>
