@@ -124,5 +124,53 @@ document.addEventListener("DOMContentLoaded", function () {
     
     // Initialize carousel
     updateCarousel(false);
+// Auto-scroll functionality
+let autoScrollInterval;
+
+function startAutoScroll() {
+    // Clear any existing interval first
+    clearInterval(autoScrollInterval);
+    
+    // Set new interval to advance slide every 3 seconds
+    autoScrollInterval = setInterval(() => {
+        cardIndex++;
+        updateCarousel();
+        
+        // If we've reached the end of the original cards
+        if (cardIndex >= totalCards) {
+            // Wait for the transition to complete, then reset
+            setTimeout(() => {
+                cardIndex = cardIndex % totalCards;
+                updateCarousel(false);
+            }, 500);
+        }
+    }, 3000); // 3 seconds interval
+}
+
+// Start auto-scroll when page loads
+startAutoScroll();
+
+// Pause auto-scroll when mouse hovers over carousel
+carousel.addEventListener('mouseenter', () => {
+    clearInterval(autoScrollInterval);
+});
+
+// Resume auto-scroll when mouse leaves carousel
+carousel.addEventListener('mouseleave', () => {
+    startAutoScroll();
+});
+
+// Reset auto-scroll timer when manually clicking navigation buttons
+prevBtn.addEventListener('click', () => {
+    // Clear existing interval and restart
+    clearInterval(autoScrollInterval);
+    startAutoScroll();
+});
+
+nextBtn.addEventListener('click', () => {
+    // Clear existing interval and restart
+    clearInterval(autoScrollInterval);
+    startAutoScroll();
+});
     
 });
