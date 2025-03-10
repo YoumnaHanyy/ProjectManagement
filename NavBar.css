@@ -44,7 +44,7 @@ nav ul li a {
 }
 
 .contact-btn {
-    background: #7a3af9;
+    background: #7a50b6;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -57,3 +57,17 @@ nav ul li a {
     margin-top: -1.5em;
     margin-left: -1.5em;
 }
+nav ul li a.active {
+    background: #9063cd;  /* Same color as "Contact us" button */
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav ul li a.active:hover {
+    background: #7a50b6; /* Darker shade on hover */
+}
+
