@@ -1,0 +1,264 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f6f3ea;
+}
+
+@import url('navbar.css');
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 50px;
+    background: #f6f3ea;
+    height: 100vh;
+}
+
+.text-container {
+    max-width: 800px;
+    position: relative;
+}
+
+h1 {
+    margin-top: -40px;
+    font-size: 80px;
+    font-family: "Rubik Spray Paint", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.1;
+    color: #2e2e2e;
+    position: relative;
+}
+
+h1 .highlight {
+    display: inline-block;
+    position: relative;
+}
+
+h1 .highlight::before {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: url('circle-icon.png') no-repeat center;
+    background-size: contain;
+    left: -60px;
+    top: -10px;
+}
+
+.stats {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+    justify-content: center;
+}
+
+.stat-box.purple {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px; /* Adjust to match letter "O" */
+    height: 50px;
+    border-radius: 50%;
+    background: #c2a2fb; /* Light purple background */
+    color: #5a2dcb; /* Dark purple text */
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.2;
+    margin: 0 5px;
+    vertical-align: middle;
+    padding: 8px;
+}
+.image-box {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    vertical-align: middle;
+    margin: 0 5px;
+}
+
+.image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.stat-box.pink {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px; /* Adjust width to match letter "O" size */
+    height: 50px; /* Adjust height */
+    border-radius: 50%; /* Make it a circle */
+    background: #fbc2eb;
+    color: #a1006b;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.2;
+    margin: 0 5px; /* Space it properly inside the word */
+    vertical-align: middle; /* Align with text */
+    padding: 8px;
+}
+.purple {
+    background: #d1c4fc;
+    color: #3f0071;
+}
+
+.description {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #555;
+}
+
+.view-btn {
+    background: #7a3af9;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 20px;
+    font-size: 16px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+
+.image-container img {
+    width: 650px;
+    height: 550px;
+    margin-top: -140px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 14px;
+}
+
+
+.review-section {
+   
+    padding: 20px;
+    border-radius: 15px;
+  margin-top: -31em;
+    margin-left: 10em;
+    max-width: 300px;
+}
+
+.review-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.sparkle {
+    color: #A855F7;
+    font-size: 16px;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.star {
+    font-size: 16px;
+    color: #FFD700;
+}
+
+.rating-number {
+    font-weight: bold;
+    color: #333;
+}
+
+.reviews {
+    color: gray;
+}
+
+.review-avatars {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.review-avatars img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.extra-reviews {
+    background: #C084FC;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.arrow{
+    width: 100px;
+    margin-top: -10em;
+    margin-left: -7em;
+}
+
+
+.WhatCanWeDo {
+   
+    padding: 20px;
+    border-radius: 15px;
+    margin-left: 70em;
+    margin-top: -10em;
+    text-align: left;
+    max-width: 350px;
+}
+
+.section-title {
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #9063cd; /* Purple color */
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.section-description {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.view-pets-btn {
+    background: #9063cd;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.view-pets-btn:hover {
+    background: #7a50b6;
+}
