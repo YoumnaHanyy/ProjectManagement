@@ -975,3 +975,116 @@ footer {
         justify-content: center;
     }
 }
+/* Statistics Section Styles */
+.statistics-section {
+    background-color: #f6f3ea;
+    padding: 60px 0;
+    text-align: center;
+    margin-top: -60px; /* To remove gap with previous section */
+}
+
+.statistics-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.statistics-title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 42px;
+    color: #86588b;
+    margin-bottom: 40px;
+}
+
+.statistics-items {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.statistic-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+}
+
+.statistic-icon {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: visible; /* Change from hidden to visible */
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.statistic-icon:nth-child(1) {
+    background-color: #c9a0a0; /* Reddish brown for dogs */
+}
+
+.statistic-icon:nth-child(2) {
+    background-color: #f8e8a0; /* Yellow for cats */
+}
+
+.statistic-icon:nth-child(3) {
+    background-color: #e0bc76; /* Light brown for capacity */
+}
+
+.statistic-icon:nth-child(4) {
+    background-color: #c9a0a0; /* Reddish for adopted */
+}
+
+.statistic-icon img {
+    position: absolute;
+    width: 150%; /* Make image larger than container */
+    height: 150%;
+    object-fit: contain; /* Change from cover to contain */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the image */
+}
+/* Target specifically the first statistic item (dog) */
+.statistic-item:first-child .statistic-icon img {
+    width: 370%; /* Larger size just for the dog icon */
+    height: 370%;
+}
+.statistic-value {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 5px;
+}
+
+.statistic-label {
+    font-size: 16px;
+    color: #666;
+    margin-top: 5px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .statistics-items {
+        gap: 25px;
+    }
+    
+    .statistic-item {
+        width: 150px;
+    }
+    
+    .statistic-icon {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media (max-width: 576px) {
+    .statistics-items {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .statistic-item {
+        margin-bottom: 30px;
+    }
+}
