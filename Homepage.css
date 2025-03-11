@@ -475,7 +475,15 @@ footer {
     object-fit: cover; /* This ensures the image covers the area without distortion */
     border-radius: 10px;
 }
+/* Add hover effect to make adoption pet cards rise */
+.pet-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
+.pet-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
 .cta-card {
     background: #6b1bc1;
     color: white;
@@ -651,12 +659,12 @@ footer {
 .contact-image.left {
     position: relative;
     right: 0; /* Remove the -90px adjustment */
-    margin-right: -90px; /* Push the dog toward the form instead */
+    margin-right: -150px; /* Push the dog toward the form instead */
     z-index: 2;
 }
 
 .contact-image.left img {
-    width: 500px; /* Increase size - adjust as needed */
+    width: 550px; /* Increase size - adjust as needed */
     height: 500px;
     max-width: none;
 }
@@ -721,23 +729,24 @@ footer {
     resize: none;
 }
 
+/* Change the submit button style to match the schedule visit button */
 .submit-btn {
-    background-color: #333;
+    background-color: transparent;
     color: white;
-    padding: 12px;
-    border: none;
+    border: 2px solid white;
+    padding: 12px 25px;
     border-radius: 30px;
     font-weight: bold;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: all 0.3s;
     margin-top: 10px;
     width: max-content;
     align-self: center;
-    padding: 12px 30px;
 }
 
 .submit-btn:hover {
-    background-color: #222;
+    background-color: white;
+    color: #c2a2fb; /* This matches the background color of your contact form */
 }
 
 /* Book Your Visit Section */
