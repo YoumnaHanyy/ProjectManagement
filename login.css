@@ -17,16 +17,16 @@ body {
 }
 
 .container {
-    background-color: #F8F8FF; /* Light background color */
+    background-color: #F8F8FF;
     border-radius: 30px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15); /* Reduced shadow intensity */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
     position: relative;
     overflow: hidden;
-    width: 768px;
-    max-width: 100%;
-    min-height: 480px;
+    width: 900px; /* Increased width to accommodate content */
+    max-width: 95%; /* Make it responsive on smaller screens */
+    min-height: 600px; /* Increased height to fit all elements */
+    display: flex; /* Use flexbox for layout control */
 }
-
 .container p {
     font-size: 14px;
     line-height: 20px;
@@ -82,10 +82,11 @@ body {
 }
 
 .form-container {
-    position: absolute;
-    top: 0;
-    height: 100%;
-    transition: all 0.6s ease-in-out;
+    flex: 1; /* Allow form container to take available space */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distribute space evenly */
+    padding: 30px; /* Add padding for spacing */
 }
 
 .sign-in {
@@ -103,11 +104,27 @@ body {
 }
 
 .sign-up {
-    left: 0;
-    width: 50%;
-    opacity: 0;
-    z-index: 1;
+    width: 100%; /* Make the sign-up form take full width */
+    opacity: 1; /* Make it visible */
+    z-index: 5;
+    animation: none; /* Remove any animations */
+} 
+.sign-up h2 { /* Style the "Create Account" heading */
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
 }
+.sign-up input,
+.sign-up select { /* Style input and select fields */
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
 .container .sign-in button {
     border: 4px solid #8060C0; /* Increased border thickness to 4px */
     background-color: transparent;
