@@ -6,39 +6,60 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
   <link rel="stylesheet" href="login.css" />
-  <link rel="stylesheet" href="../Home page/styling.css">
-  <title>Login Page </title>
-  <script src="../Home page/header.js" defer></script>
+  <link rel="stylesheet" href="login.css">
+  <title>Pet Adoption - Login & Sign Up</title>
+  <script src="login.js" defer></script>
 </head>
 
 <body>
   <div id="header"></div>
   <div class="container" id="container">
     <div class="form-container sign-up">
-      <form>
+      <form id="signupForm" action="#" method="POST" novalidate>
         <h1>Create Account</h1>
         <span>or use your email for registration</span>
-        <input type="text" placeholder="Name" />
-        <input type="email" placeholder="Email" />
-        <input type="password" id="password" name="password" placeholder=" Password" required
-          oninput="confirmPassword.pattern = this.value">
-        <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password" required
-          pattern=".{6,}">
-
-        <button>Sign Up</button>
+        <input type="text" id="fullName" name="fullName" placeholder="Full Name" required>
+        <input type="text" id="username" name="username" placeholder="Username" required>
+        <input type="email" id="email" name="email" placeholder="Email" required>
+        <input type="text" id="phone" name="phone" placeholder="Phone Number" required>
+        <input type="text" id="address" name="address" placeholder="Home Address" required>
+        <input type="password" id="password" name="password" placeholder="Password" required>
+        <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password" required>
+        <select id="petType" name="petType" required>
+          <option value="">Select a pet</option>
+          <option value="Dog">Dog</option>
+          <option value="Cat">Cat</option>
+          <option value="Rabbit">Rabbit</option>
+          <option value="Bird">Bird</option>
+          <option value="Other">Other</option>
+        </select>
+        <select id="experience" name="experience" required>
+          <option value="">Do you have experience with pets?</option>
+          <option value="First-time pet owner">First-time pet owner</option>
+          <option value="Owned pets before">Owned pets before</option>
+          <option value="Currently have pets">Currently have pets</option>
+          <option value="Worked with animals">Worked with animals</option>
+        </select>
+        <textarea id="homeSetup" name="homeSetup" placeholder="Describe your home setup (e.g., yard, apartment, other pets)" required></textarea>
+        <select id="commitment" name="commitment" required>
+          <option value="">Are you prepared for a long-term commitment?</option>
+          <option value="Yes, absolutely">Yes, absolutely</option>
+          <option value="Yes, but with concerns">Yes, but with concerns</option>
+          <option value="Not sure">Not sure</option>
+        </select>
+        <button type="submit">Sign Up</button>
       </form>
     </div>
     <div class="form-container sign-in">
       <form>
         <h1>Sign In</h1>
         <span>or use your email and password</span>
-        <input type="email" placeholder="Email" />
-        <input type="password" placeholder="Password" />
-        <a href="forgetpass.html">Forget Your Password?</a>
-        <button>Sign In</button>
+        <input type="email" placeholder="Email" required />
+        <input type="password" placeholder="Password" required />
+        <a href="forgetpass.html">Forgot Your Password?</a>
+        <button type="submit">Sign In</button>
       </form>
     </div>
-    <!-- holds buttons for switching between Sign In and Sign Up-->
     <div class="toggle-container">
       <div class="toggle">
         <div class="toggle-panel toggle-left">
@@ -50,7 +71,6 @@
           <h1>Hello, Friend!</h1>
           <p>Register with your personal details to use all site features</p>
           <button class="hidden" id="register">Sign Up</button>
-
         </div>
       </div>
     </div>

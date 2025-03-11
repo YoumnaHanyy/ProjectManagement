@@ -1,4 +1,4 @@
-/* norhan styling */
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
 
 * {
@@ -9,7 +9,6 @@
 }
 
 body {
-
     background: linear-gradient(to right, #FAE3D9, #C8A27D);
     display: flex;
     align-items: center;
@@ -29,19 +28,13 @@ body {
     min-height: 480px;
 }
 
-
 .container p {
     font-size: 14px;
     line-height: 20px;
     letter-spacing: 0.3px;
     margin: 20px 0;
 }
-/* 
-.container span {
-    font-size: 12px;
-} */
 
-/*Styles links */
 .container a {
     color: #333;
     font-size: 13px;
@@ -51,7 +44,6 @@ body {
 
 .container button {
     background-color: #8B5E3C;
-    /* Dark Brown */
     color: #fff;
     font-size: 12px;
     padding: 10px 45px;
@@ -133,7 +125,6 @@ body {
     z-index: 1000;
 }
 
-
 .container.active .toggle-container {
     transform: translateX(-100%);
     border-radius: 0 150px 100px 0;
@@ -141,7 +132,6 @@ body {
 
 .toggle {
     background: linear-gradient(to right, #a67b5b, #8B5E3C);
-    /* Brown Gradient */
     color: #fff;
     position: relative;
     left: -100%;
@@ -186,38 +176,34 @@ body {
 .container.active .toggle-right {
     transform: translateX(200%);
 }
+
 /* ====== Forget Password Page Styling ====== */
 .reset-container {
     background-color: #fff;
     border-radius: 20px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    width: 500px; /* Adjust width to match design */
+    width: 500px;
     max-width: 90%;
     padding: 40px;
     text-align: center;
-    
-    /* Center Everything Inside */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-/* Reset Password Heading */
 .reset-container h1 {
     font-size: 26px;
     font-weight: 700;
     margin-bottom: 10px;
 }
 
-/* Reset Password Subtext */
 .reset-container p {
     font-size: 16px;
     color: #666;
     margin-bottom: 20px;
 }
 
-/* Input Fields */
 .reset-container input {
     width: 100%;
     padding: 12px;
@@ -230,7 +216,6 @@ body {
     margin-bottom: 15px;
 }
 
-/* Reset Button */
 .reset-container button {
     width: 100%;
     padding: 12px;
@@ -245,12 +230,10 @@ body {
     transition: 0.3s;
 }
 
-/* Button Hover Effect */
 .reset-container button:hover {
     background: #6f4830;
 }
 
-/* Centering Reset Password Page */
 body.reset {
     background: linear-gradient(to right, #FAE3D9, #C8A27D);
     display: flex;
