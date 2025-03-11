@@ -1,3 +1,4 @@
+
 document.addEventListener("DOMContentLoaded", () => {
     const elements = document.querySelectorAll(".fade-in, .slide-in-left, .slide-in-right");
     const observer = new IntersectionObserver(entries => {

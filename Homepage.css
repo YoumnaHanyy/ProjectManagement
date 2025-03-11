@@ -31,7 +31,7 @@ body {
 }
 
 h1 {
-    margin-top: -110px;
+    margin-top: 10px;
     font-size: 80px;
     font-family: "Rubik Spray Paint", system-ui;
     font-weight: 400;
@@ -150,12 +150,12 @@ footer {
 
 
 .review-section {
-   
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
     border-radius: 15px;
-  margin-top: -31em;
-    margin-left: 10em;
-    max-width: 300px;
+  margin-top: -29em;
+    margin-left: 11em;
+    max-width: 200px;
 }
 
 .review-title {
@@ -229,13 +229,13 @@ footer {
 
 
 .WhatCanWeDo {
-   
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
     border-radius: 15px;
     margin-left: 70em;
-    margin-top: -15em;
+    margin-top: -10em;
     text-align: left;
-    max-width: 350px;
+    max-width: 300px;
 }
 
 .section-title {
@@ -285,6 +285,7 @@ footer {
 }
 
 .section-header {
+    
     display: flex;
     align-items: center;
     justify-content: space-between; /* Changed from center to space-between */
@@ -296,6 +297,7 @@ footer {
 }
 
 .header-content {
+    
     text-align: right;
     padding: 0;
     margin-right: 180px; /* Move text to the left */
@@ -426,4 +428,546 @@ footer {
 
 .view-more:hover {
     text-decoration: underline;
+}
+
+
+.adoption-section {
+    text-align: center;
+    margin-left: 7em;
+    font-family: 'Rubik', sans-serif;
+    
+}
+
+.adoption-title {
+    margin-left: -26em;
+    font-size: 38px;
+    font-family: 'Dancing Script', cursive;
+    color: #86588b;
+    text-decoration: none ;
+ 
+}
+.adoption-title a:hover {
+    text-decoration: none; 
+    color: #6b1bc1;/* Ensures no underline on hover */
+}
+
+.adoption-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+    
+
+}
+
+.pet-card, .cta-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+    width: 200px;
+}
+
+.pet-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.cta-card {
+    background: #6b1bc1;
+    color: white;
+}
+
+.cta-button {
+    background: white;
+    color: #6b1bc1;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cta-button:hover {
+    background: #4e1494;
+    color: white;
+}
+
+.adoption-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.pet-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.pet-card {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.ad-section {
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    width: 250px;
+}
+
+.ad-section img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.ad-label {
+    font-size: 14px;
+    color: gray;
+    margin-top: 5px;
+}
+
+
+.about-section { margin-left: 5em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    background: #f6f3ea;
+}
+
+.about-content {
+    max-width: 50%;
+}
+
+.about-title {
+    font-size: 38px;
+    font-family: 'Dancing Script', cursive;
+    color: #86588b;
+    margin-bottom: 15px;
+}
+
+.about-content p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+}
+
+.learn-more {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #6b1bc1;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.about-image img {
+    width: 30em;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Contact Us Section */
+.contact-section {
+    padding: 60px 0;
+    position: relative;
+    overflow: hidden;
+    margin-top: 60px; /* Add space above the contact section */
+
+}
+
+.contact-section::before {
+    content: '';
+    background-image: url('paw-pattern.png');
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.1;
+    z-index: 0;
+}
+/* Change the contact section header alignment */
+.contact-section .section-header {
+    text-align: left;
+    margin-left: -4em; /* Same as the about-section's margin-left */
+    width: auto; /* Override the 100% width setting if needed */
+}
+.contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    position: relative;
+    z-index: 1;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-header h2 {
+    font-family: 'Dancing Script', cursive;
+    color: #86588b;
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.breadcrumb {
+    font-size: 14px;
+    color: #666;
+}
+
+.breadcrumb a {
+    color: #333;
+    text-decoration: none;
+}
+
+.contact-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-image {
+    flex: 0 0 20%;
+}
+
+.contact-image img {
+    max-width: 100%;
+    border-radius: 15px;
+}
+/* Make the left dog image (handdog) appear to touch the form */
+.contact-image.left {
+    position: relative;
+    right: 0; /* Remove the -90px adjustment */
+    margin-right: -90px; /* Push the dog toward the form instead */
+    z-index: 2;
+}
+
+.contact-image.left img {
+    width: 500px; /* Increase size - adjust as needed */
+    height: 500px;
+    max-width: none;
+}
+
+/* Make the right cat image bigger */
+.contact-image.right {
+    position: relative;
+    left: 0; /* Remove the -90px adjustment */
+    margin-left: -90px; /* Push the cat toward the form instead */
+    z-index: 2;
+}
+
+.contact-image.right img {
+    width: 500px; /* Make cat bigger - adjust as needed */
+    height: 500px;
+    max-width: none;
+}
+.contact-form-container {
+    flex: 0 0 50%;
+    background-color: #c2a2fb;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    color: #fff;
+}
+
+.form-header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.form-header h3 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.form-header h2 {
+    font-family: 'Rubik', sans-serif;
+    font-size: 28px;
+    margin: 0;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    padding: 12px 15px;
+    border-radius: 5px;
+    border: none;
+    font-family: 'Arial', sans-serif;
+    font-size: 14px;
+}
+
+.contact-form textarea {
+    height: 120px;
+    resize: none;
+}
+
+.submit-btn {
+    background-color: #333;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+    width: max-content;
+    align-self: center;
+    padding: 12px 30px;
+}
+
+.submit-btn:hover {
+    background-color: #222;
+}
+
+/* Book Your Visit Section */
+.book-visit-section {
+    background-color: #7f51b0;
+    padding: 60px 0;
+    margin: 60px 0;
+}
+
+.book-visit-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.book-visit-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.book-visit-text {
+    flex: 0 0 50%;
+    color: white;
+    padding-right: 40px;
+}
+
+.book-visit-text h2 {
+    font-family: 'Rubik', sans-serif;
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.schedule-btn {
+    display: inline-block;
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    margin-top: 20px;
+    transition: all 0.3s;
+}
+
+.schedule-btn:hover {
+    background-color: white;
+    color: #7f51b0;
+}
+
+.book-visit-image {
+    flex: 0 0 45%;
+}
+
+.book-visit-image img {
+    max-width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer Section */
+.footer-section {
+    background-color: #FFF8E7;
+    padding: 60px 0 20px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.footer-columns {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.footer-column {
+    flex: 0 0 23%;
+}
+
+.footer-logo {
+    font-family: 'Dancing Script', cursive;
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background-color: #f0f0f0;
+    border-radius: 50%;
+    color: #666;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.social-icon:hover {
+    background-color: #7f51b0;
+    color: white;
+}
+
+.footer-column h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    color: #666;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+    color: #7f51b0;
+}
+
+.contact-info p {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 15px;
+    color: #666;
+}
+
+.contact-info i {
+    margin-right: 10px;
+    color: #7f51b0;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+    color: #888;
+    font-size: 14px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-links a {
+    color: #888;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: #7f51b0;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .contact-content {
+        flex-direction: column;
+    }
+    
+    .contact-image {
+        flex: 0 0 100%;
+        margin-bottom: 20px;
+    }
+    
+    .contact-form-container {
+        flex: 0 0 100%;
+        order: 2;
+    }
+    
+    .contact-image.right {
+        order: 3;
+        margin-top: 20px;
+    }
+    
+    .book-visit-content {
+        flex-direction: column;
+    }
+    
+    .book-visit-text {
+        flex: 0 0 100%;
+        padding-right: 0;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    
+    .book-visit-image {
+        flex: 0 0 100%;
+    }
+    
+    .footer-columns {
+        flex-wrap: wrap;
+    }
+    
+    .footer-column {
+        flex: 0 0 48%;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-column {
+        flex: 0 0 100%;
+    }
+    
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .footer-links {
+        margin-top: 10px;
+        justify-content: center;
+    }
 }
