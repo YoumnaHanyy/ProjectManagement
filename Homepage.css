@@ -285,6 +285,7 @@ footer {
 }
 
 .section-header {
+    
     display: flex;
     align-items: center;
     justify-content: space-between; /* Changed from center to space-between */
@@ -296,6 +297,7 @@ footer {
 }
 
 .header-content {
+    
     text-align: right;
     padding: 0;
     margin-right: 180px; /* Move text to the left */
@@ -437,9 +439,10 @@ footer {
 }
 
 .adoption-title {
-    margin-left: -45em;
-    font-size: 24px;
-    color: #6b1bc1;
+    margin-left: -26em;
+    font-size: 38px;
+    font-family: 'Dancing Script', cursive;
+    color: #86588b;
     text-decoration: none ;
  
 }
@@ -468,9 +471,19 @@ footer {
 
 .pet-card img {
     width: 100%;
+    height: 170px; /* Set a fixed height for all images */
+    object-fit: cover; /* This ensures the image covers the area without distortion */
     border-radius: 10px;
 }
+/* Add hover effect to make adoption pet cards rise */
+.pet-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
+.pet-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
 .cta-card {
     background: #6b1bc1;
     color: white;
@@ -504,9 +517,11 @@ footer {
 
 .pet-card {
     background: white;
-    padding: 15px;
     border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
     text-align: center;
+    width: 200px;
 }
 
 .ad-section {
@@ -542,8 +557,9 @@ footer {
 }
 
 .about-title {
-    font-size: 24px;
-    color: #333;
+    font-size: 38px;
+    font-family: 'Dancing Script', cursive;
+    color: #86588b;
     margin-bottom: 15px;
 }
 
@@ -567,4 +583,518 @@ footer {
     width: 30em;
     height: auto;
     border-radius: 10px;
+}
+
+/* Contact Us Section */
+.contact-section {
+    padding: 60px 0;
+    position: relative;
+    overflow: hidden;
+    margin-top: 60px; /* Add space above the contact section */
+
+}
+
+.contact-section::before {
+    content: '';
+    background-image: url('paw-pattern.png');
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.1;
+    z-index: 0;
+}
+/* Change the contact section header alignment */
+.contact-section .section-header {
+    text-align: left;
+    margin-left: -4em; /* Same as the about-section's margin-left */
+    width: auto; /* Override the 100% width setting if needed */
+}
+.contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    position: relative;
+    z-index: 1;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-header h2 {
+    font-family: 'Dancing Script', cursive;
+    color: #86588b;
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.breadcrumb {
+    font-size: 14px;
+    color: #666;
+}
+
+.breadcrumb a {
+    color: #333;
+    text-decoration: none;
+}
+
+.contact-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-image {
+    flex: 0 0 20%;
+}
+
+.contact-image img {
+    max-width: 100%;
+    border-radius: 15px;
+}
+/* Make the left dog image (handdog) appear to touch the form */
+.contact-image.left {
+    position: relative;
+    right: 0; /* Remove the -90px adjustment */
+    margin-right: -150px; /* Push the dog toward the form instead */
+    z-index: 2;
+}
+
+.contact-image.left img {
+    width: 550px; /* Increase size - adjust as needed */
+    height: 500px;
+    max-width: none;
+}
+
+/* Make the right cat image bigger */
+.contact-image.right {
+    position: relative;
+    left: 0; /* Remove the -90px adjustment */
+    /* Push the cat toward the form instead */
+    z-index: 2;
+}
+
+.contact-image.right img {
+    width: 600px; /* Make cat bigger - adjust as needed */
+    height: 600px;
+    margin-right:-30em; 
+    max-width: none;
+}
+.contact-form-container {
+    flex: 0 0 50%;
+    background-color: #c2a2fb;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    color: #fff;
+}
+
+.form-header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.form-header h3 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.form-header h2 {
+    font-family: 'Rubik', sans-serif;
+    font-size: 28px;
+    margin: 0;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    padding: 12px 15px;
+    border-radius: 5px;
+    border: none;
+    font-family: 'Arial', sans-serif;
+    font-size: 14px;
+}
+
+.contact-form textarea {
+    height: 120px;
+    resize: none;
+}
+
+/* Change the submit button style to match the schedule visit button */
+.submit-btn {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-top: 10px;
+    width: max-content;
+    align-self: center;
+}
+
+.submit-btn:hover {
+    background-color: white;
+    color: #c2a2fb; /* This matches the background color of your contact form */
+}
+
+/* Book Your Visit Section */
+.book-visit-section {
+    background-color: #7f51b0;
+    padding: 60px 0;
+    margin: 60px 0;
+}
+
+.book-visit-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.book-visit-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.book-visit-text {
+    flex: 0 0 50%;
+    color: white;
+    padding-right: 40px;
+}
+
+.book-visit-text h2 {
+    font-family: 'Rubik', sans-serif;
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.schedule-btn {
+    display: inline-block;
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    margin-top: 20px;
+    transition: all 0.3s;
+}
+
+.schedule-btn:hover {
+    background-color: white;
+    color: #7f51b0;
+}
+
+.book-visit-image {
+    flex: 0 0 45%;
+}
+
+.book-visit-image img {
+    max-width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer Section */
+.footer-section {
+    background-color: #FFF8E7;
+    padding: 60px 0 20px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.footer-columns {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.footer-column {
+    flex: 0 0 23%;
+}
+
+.footer-logo {
+    font-family: 'Dancing Script', cursive;
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background-color: #f0f0f0;
+    border-radius: 50%;
+    color: #666;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.social-icon:hover {
+    background-color: #7f51b0;
+    color: white;
+}
+
+.footer-column h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    color: #666;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+    color: #7f51b0;
+}
+
+.contact-info p {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 15px;
+    color: #666;
+}
+
+.contact-info i {
+    margin-right: 10px;
+    color: #7f51b0;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+    color: #888;
+    font-size: 14px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-links a {
+    color: #888;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: #7f51b0;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .contact-content {
+        flex-direction: column;
+    }
+    
+    .contact-image {
+        flex: 0 0 100%;
+        margin-bottom: 20px;
+    }
+    
+    .contact-form-container {
+        flex: 0 0 100%;
+        order: 2;
+    }
+    
+    .contact-image.right {
+        order: 3;
+        margin-top: 20px;
+    }
+    
+    .book-visit-content {
+        flex-direction: column;
+    }
+    
+    .book-visit-text {
+        flex: 0 0 100%;
+        padding-right: 0;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    
+    .book-visit-image {
+        flex: 0 0 100%;
+    }
+    
+    .footer-columns {
+        flex-wrap: wrap;
+    }
+    
+    .footer-column {
+        flex: 0 0 48%;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-column {
+        flex: 0 0 100%;
+    }
+    
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .footer-links {
+        margin-top: 10px;
+        justify-content: center;
+    }
+}
+/* Statistics Section Styles */
+.statistics-section {
+    background-color: #f6f3ea;
+    padding: 60px 0;
+    text-align: center;
+    margin-top: -60px; /* To remove gap with previous section */
+}
+
+.statistics-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.statistics-title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 42px;
+    color: #86588b;
+    margin-bottom: 40px;
+}
+
+.statistics-items {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.statistic-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+}
+
+.statistic-icon {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: visible; /* Change from hidden to visible */
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.statistic-icon:nth-child(1) {
+    background-color: #c9a0a0; /* Reddish brown for dogs */
+}
+
+.statistic-icon:nth-child(2) {
+    background-color: #f8e8a0; /* Yellow for cats */
+}
+
+.statistic-icon:nth-child(3) {
+    background-color: #e0bc76; /* Light brown for capacity */
+}
+
+.statistic-icon:nth-child(4) {
+    background-color: #c9a0a0; /* Reddish for adopted */
+}
+
+.statistic-icon img {
+    position: absolute;
+    width: 150%; /* Make image larger than container */
+    height: 150%;
+    object-fit: contain; /* Change from cover to contain */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the image */
+}
+/* Target specifically the first statistic item (dog) */
+.statistic-item:first-child .statistic-icon img {
+    width: 370%; /* Larger size just for the dog icon */
+    height: 370%;
+}
+.statistic-value {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 5px;
+}
+
+.statistic-label {
+    font-size: 16px;
+    color: #666;
+    margin-top: 5px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .statistics-items {
+        gap: 25px;
+    }
+    
+    .statistic-item {
+        width: 150px;
+    }
+    
+    .statistic-icon {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media (max-width: 576px) {
+    .statistics-items {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .statistic-item {
+        margin-bottom: 30px;
+    }
 }

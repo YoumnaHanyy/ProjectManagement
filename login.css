@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background: linear-gradient(to right, #F8F0FA, #E8E0F0); /* Adjusted background colors */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.container {
+    background-color: #F8F8FF;
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    position: relative;
+    overflow: hidden;
+    width: 900px; /* Increased width to accommodate content */
+    max-width: 95%; /* Make it responsive on smaller screens */
+    height: 90%; /* Increased height to fit all elements */
+    display: flex; /* Use flexbox for layout control */
+}
+.container p {
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.3px;
+    margin: 20px 0;
+}
+
+.container a {
+    color: #555; /* Slightly darker text color */
+    font-size: 13px;
+    text-decoration: none;
+    margin: 15px 0 10px;
+}
+
+.container button {
+    background-color: #9370DB; /* Lavender color for buttons */
+    color: #fff;
+    font-size: 12px;
+    padding: 10px 45px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.container button.hidden {
+    background-color: transparent;
+    border-color: #9370DB; /* Lavender border for hidden button */
+}
+
+.container form {
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    height: 100%;
+}
+
+.container input {
+    background-color: #F0F0F0; /* Lighter input background */
+    border: none;
+    margin: 8px 0;
+    padding: 10px 15px;
+    font-size: 13px;
+    border-radius: 8px;
+    width: 100%;
+    outline: none;
+}
+
+.form-container {
+    flex: 1; /* Allow form container to take available space */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distribute space evenly */
+    padding: 30px; /* Add padding for spacing */
+}
+
+.sign-in {
+    position: absolute;
+    left: 0;
+    width: 50%;
+    background-color:#F8F8FF ;
+    margin-top: 7em;
+    
+    transition: transform 0.6s ease-in-out;
+}
+.container .sign-in button {
+    border: 2px solid #8060C0; /* Add a 2px solid lavender border */
+    background-color: transparent; /* Make the background transparent */
+    color: #8060C0; /* Change the text color to lavender */
+}
+.container.active .sign-in {
+    opacity: 0;
+    
+    transform: translateX(50%);
+}
+.sign-up {
+    position: absolute;
+    right: 0;
+    width: 50%;
+    
+    opacity: 0;
+  
+    transition: opacity 0.6s ease-in-out;
+    padding: 20px; /* Add padding for better spacing */
+}
+
+
+/* Ensure the form inside sign-up scrolls properly */
+.sign-up form {
+    max-height: 100%; /* Prevent content overflow */
+    overflow-y: auto; /* Scroll only if needed */
+}
+.sign-up h2 { /* Style the "Create Account" heading */
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.sign-up input,
+.sign-up select { /* Style input and select fields */
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+.container .sign-in button {
+    
+    border: 4px solid #8060C0; /* Increased border thickness to 4px */
+    background-color: transparent;
+    color: #8060C0;
+    font-weight: bold; /* Make the text bold */
+    padding: 10px 20px; /* Adjust padding if needed to accommodate the thicker border */
+}
+.container.active .sign-up {
+    opacity: 1;
+    transform: translateX(-0%);
+}
+
+.toggle-container {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    transition: all 0.6s ease-in-out;
+    border-radius: 150px 0 0 100px;
+    z-index: 1000;
+}
+
+.container.active .toggle-container {
+    transform: translateX(-100%);
+    border-radius: 0 150px 100px 0;
+}
+
+.toggle {
+    background: linear-gradient(to right, #BA55D3, #9370DB); /* Light purple gradient */
+    color: #fff;
+    position: relative;
+    left: -100%;
+    height: 100%;
+    width: 200%;
+    transform: translateX(0);
+    transition: all 0.6s ease-in-out;
+}
+
+.container.active .toggle {
+    transform: translateX(50%);
+}
+
+.toggle-panel {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 30px;
+    text-align: center;
+    top: 0;
+    transform: translateX(0);
+    transition: all 0.6s ease-in-out;
+}
+
+.toggle-left {
+    transform: translateX(-200%);
+}
+
+.container.active .toggle-left {
+    transform: translateX(0);
+}
+
+.toggle-right {
+    right: 0;
+    transform: translateX(0);
+}
+
+.container.active .toggle-right {
+    transform: translateX(200%);
+}
+
+/* ====== Forget Password Page Styling ====== */
+.reset-container {
+    background-color: #F8F8FF; /* Light background color */
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Reduced shadow intensity */
+    width: 500px;
+    max-width: 90%;
+    padding: 40px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.reset-container h1 {
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.reset-container p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.reset-container input {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    background: #F0F0F0; /* Lighter input background */
+    outline: none;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.reset-container button {
+    width: 100%;
+    padding: 12px;
+    background: #9370DB; /* Lavender color for buttons */
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.reset-container button:hover {
+    background: #8060C0; /* Slightly darker lavender on hover */
+}
+
+body.reset {
+    background: linear-gradient(to right, #F8F0FA, #E8E0F0); /* Adjusted background colors */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
