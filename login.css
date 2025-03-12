@@ -282,3 +282,20 @@ body.reset {
     justify-content: center;
     height: 100vh;
 }
+/* back arrow*/
+.back-arrow{
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    padding: 8px 12px;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+}
+.back-arrow.hover{
+background-color: #ddd;
+color: #000;
+}
