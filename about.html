@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Pet Foster</title>
+    <link rel="stylesheet" href="navbar.css">   <link rel="stylesheet" href="about.css">  </head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">Pet <br><span class="highlight">foster</span></div>
+            <img src="../pets/paw.png" class="footprint">
+            <ul>
+                <li><a href="Homepage.html">Home</a></li>
+                <li><a href="about.html" class="active">About</a></li>  <li><a href="#">Services</a></li>
+                <li><a href="#">Pets</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <button class="LoginSignup-btn" onclick="window.location.href='login.html'">Login/Signup</button>
+        </nav>
+    </header>
+
+    <main class="about-content">
+        <section class="about-section">
+            <h1>About Pet Foster</h1>
+            <p>Welcome to Pet Foster, your trusted platform for connecting loving homes with adorable pets in need.</p>
+            <p>Our mission is to provide a safe and caring environment for pets while they wait for their forever homes. We believe that every pet deserves a loving family, and we work tirelessly to make that happen.</p>
+        </section>
+
+        <section class="team-section">
+            <h2>Our Team</h2>
+            <div class="team-member">
+                <img src="team-member-1.jpg" alt="Team Member 1">
+                <h3>John Doe</h3>
+                <p>Founder & CEO</p>
+            </div>
+            <div class="team-member">
+                <img src="team-member-2.jpg" alt="Team Member 2">
+                <h3>Jane Smith</h3>
+                <p>Adoption Coordinator</p>
+            </div>
+            </section>
+
+        <section class="values-section">
+            <h2>Our Values</h2>
+            <ul>
+                <li>Compassion</li>
+                <li>Integrity</li>
+                <li>Transparency</li>
+                <li>Community</li>
+            </ul>
+        </section>
+    </main>
+
+    <script>
+        // JavaScript for active link and scroll effect
+        function setActiveLink() {
+            const navLinks = document.querySelectorAll('nav ul li a');
+            const currentPage = window.location.pathname.split('/').pop();
+
+            navLinks.forEach(link => {
+                if (link.getAttribute('href') === currentPage) {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
+            });
+        }
+
+        function handleScroll() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        }
+
+        window.onload = function() {
+            setActiveLink();
+            handleScroll();
+        };
+
+        window.addEventListener('scroll', handleScroll);
+    </script>
+
+    <script src="about.js"></script>  </body>
+</html>

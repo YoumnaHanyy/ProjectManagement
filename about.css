@@ -1,0 +1,45 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 100px auto 20px; /* Adjusted top margin to account for fixed header */
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.about-section, .team-section, .values-section {
+    margin-bottom: 30px;
+}
+
+.team-section {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.team-member {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.team-member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.values-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.values-section li {
+    margin-bottom: 10px;
+}
