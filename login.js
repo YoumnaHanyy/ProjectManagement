@@ -1,12 +1,13 @@
-/This retrieves the HTML element with the id container/
 const container = document.getElementById("container");
 const registerBtn = document.getElementById("register");
 const loginBtn = document.getElementById("login");
 
 registerBtn.addEventListener("click", () => {
-  container.classList.add("active");
+    console.log("Register button clicked"); // Debug message
+    container.classList.add("active");
 });
 
 loginBtn.addEventListener("click", () => {
-  container.classList.remove("active");
+    console.log("Login button clicked"); // Debug message
+    container.classList.remove("active");
 });

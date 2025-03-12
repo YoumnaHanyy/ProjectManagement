@@ -90,10 +90,11 @@ body {
 }
 
 .sign-in {
-    left: 0;
-    width: 50%;
-    z-index: 2;
+    display: flex !important; /* Ensure it stays visible */
+    opacity: 1 !important;
+    transform: none !important;
 }
+
 .container .sign-in button {
     border: 2px solid #8060C0; /* Add a 2px solid lavender border */
     background-color: transparent; /* Make the background transparent */
