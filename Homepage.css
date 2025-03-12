@@ -1,0 +1,1100 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f6f3ea;
+    overflow-x: hidden; /* Removes horizontal scrollbar */
+    display: flex;
+    flex-direction: column;
+}
+
+@import url('navbar.css');
+@import url('https://fonts.cdnfonts.com/css/freshener');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap');
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 50px;
+    background: #f6f3ea;
+    height: 100vh;
+}
+
+.text-container {
+    max-width: 800px;
+    position: relative;
+}
+
+h1 {
+    margin-top: 10px;
+    font-size: 80px;
+    font-family: "Rubik Spray Paint", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.1;
+    color: #2e2e2e;
+    position: relative;
+}
+
+h1 .highlight {
+    display: inline-block;
+    position: relative;
+}
+
+h1 .highlight::before {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: url('circle-icon.png') no-repeat center;
+    background-size: contain;
+    left: -60px;
+    top: -10px;
+}
+
+.stats {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+    justify-content: center;
+}
+
+.stat-box.purple {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px; /* Adjust to match letter "O" */
+    height: 40px;
+    border-radius: 50%;
+    background: #c2a2fb; /* Light purple background */
+    color: #5a2dcb; /* Dark purple text */
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.2;
+    margin: 0 5px;
+    vertical-align: middle;
+    padding: 8px;
+}
+.image-box {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    vertical-align: middle;
+    margin: 0 5px;
+}
+
+.image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.stat-box.pink {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px; /* Adjust width to match letter "O" size */
+    height: 40px; /* Adjust height */
+    border-radius: 50%; /* Make it a circle */
+    background: #fbc2eb;
+    color: #a1006b;
+    font-size: 8px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1;
+    margin: 0 5px; /* Space it properly inside the word */
+    vertical-align: middle; /* Align with text */
+    padding: 8px;
+}
+.purple {
+    background: #d1c4fc;
+    color: #3f0071;
+}
+
+.description {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #555;
+}
+
+.view-btn {
+    background: #7a3af9;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 20px;
+    font-size: 16px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+
+.image-container img {
+    width: 650px;
+    height: 550px;
+    margin-top: -140px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 14px;
+}
+
+
+.review-section {
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 15px;
+  margin-top: -29em;
+    margin-left: 11em;
+    max-width: 200px;
+}
+
+.review-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.sparkle {
+    color: #A855F7;
+    font-size: 16px;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.star {
+    font-size: 16px;
+    color: #FFD700;
+}
+
+.rating-number {
+    font-weight: bold;
+    color: #333;
+}
+
+.reviews {
+    color: gray;
+}
+
+.review-avatars {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.review-avatars img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.extra-reviews {
+    background: #C084FC;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.arrow{
+    width: 100px;
+    margin-top: -10em;
+    margin-left: -7em;
+}
+
+
+.WhatCanWeDo {
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 15px;
+    margin-left: 70em;
+    margin-top: -10em;
+    text-align: left;
+    max-width: 300px;
+}
+
+.section-title {
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #9063cd; /* Purple color */
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.section-description {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.view-pets-btn {
+    background: #9063cd;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.view-pets-btn:hover {
+    background: #7a50b6;
+}
+
+
+/*breeds cards */
+.popular-breeds {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #f6f3ea;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 12rem; /* Increased from 3rem to 8rem for more space */
+}
+
+.section-header {
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Changed from center to space-between */
+    margin-bottom: 40px;
+    width: 100%;
+    position: relative;
+    padding: 0 40px; /* Add padding to the container */
+
+}
+
+.header-content {
+    
+    text-align: right;
+    padding: 0;
+    margin-right: 180px; /* Move text to the left */
+
+}
+/* Add this new class to group the buttons together */
+.carousel-buttons {
+    display: flex;
+    gap: 10px; /* Space between the buttons */
+    margin-left: 180px; /* Move buttons to the right */
+
+}
+.section-header h2 {
+    margin: 0;
+    font-family: 'Dancing Script', cursive;
+    font-size: 42px;
+    color: #86588b;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.section-header .subtitle {
+    margin: 0;
+    font-size: 14px;
+    color: #787878;
+    font-weight: normal;
+}
+
+.carousel-btn {
+    background: #FFFFFF;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    color: #666;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.carousel-btn:hover {
+    background-color: #ebbbf8;
+}
+
+.carousel-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px 0;
+}
+
+.carousel {
+    display: flex;
+    gap: 20px;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+}
+
+.breed-card {
+    background: white;
+    border-radius: 12px;
+    width: calc(25% - 20px);
+    min-width: 240px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+    flex-shrink: 0;
+}
+
+.breed-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.card-content {
+    padding: 15px;
+    text-align: left;
+}
+
+.card-content h3 {
+    margin: 0 0 15px 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #f0f0f0;
+    padding-top: 12px;
+}
+
+.listings {
+    margin: 0;
+    font-size: 12px;
+    color: #888;
+}
+
+.view-more {
+    font-size: 12px;
+    color: #FF9DC5;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.view-more:hover {
+    text-decoration: underline;
+}
+
+
+.adoption-section {
+    text-align: center;
+    margin-left: 7em;
+    font-family: 'Rubik', sans-serif;
+    
+}
+
+.adoption-title {
+    margin-left: -26em;
+    font-size: 38px;
+    font-family: 'Dancing Script', cursive;
+    color: #86588b;
+    text-decoration: none ;
+ 
+}
+.adoption-title a:hover {
+    text-decoration: none; 
+    color: #6b1bc1;/* Ensures no underline on hover */
+}
+
+.adoption-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+    
+
+}
+
+.pet-card, .cta-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+    width: 200px;
+}
+
+.pet-card img {
+    width: 100%;
+    height: 170px; /* Set a fixed height for all images */
+    object-fit: cover; /* This ensures the image covers the area without distortion */
+    border-radius: 10px;
+}
+/* Add hover effect to make adoption pet cards rise */
+.pet-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pet-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+.cta-card {
+    background: #6b1bc1;
+    color: white;
+}
+
+.cta-button {
+    background: white;
+    color: #6b1bc1;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cta-button:hover {
+    background: #4e1494;
+    color: white;
+}
+
+.adoption-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.pet-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.pet-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+    width: 200px;
+}
+
+.ad-section {
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    width: 250px;
+}
+
+.ad-section img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.ad-label {
+    font-size: 14px;
+    color: gray;
+    margin-top: 5px;
+}
+
+
+.about-section { margin-left: 5em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    background: #f6f3ea;
+}
+
+.about-content {
+    max-width: 50%;
+}
+
+.about-title {
+    font-size: 38px;
+    font-family: 'Dancing Script', cursive;
+    color: #86588b;
+    margin-bottom: 15px;
+}
+
+.about-content p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+}
+
+.learn-more {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #6b1bc1;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.about-image img {
+    width: 30em;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Contact Us Section */
+.contact-section {
+    padding: 60px 0;
+    position: relative;
+    overflow: hidden;
+    margin-top: 60px; /* Add space above the contact section */
+
+}
+
+.contact-section::before {
+    content: '';
+    background-image: url('paw-pattern.png');
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.1;
+    z-index: 0;
+}
+/* Change the contact section header alignment */
+.contact-section .section-header {
+    text-align: left;
+    margin-left: -4em; /* Same as the about-section's margin-left */
+    width: auto; /* Override the 100% width setting if needed */
+}
+.contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    position: relative;
+    z-index: 1;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-header h2 {
+    font-family: 'Dancing Script', cursive;
+    color: #86588b;
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.breadcrumb {
+    font-size: 14px;
+    color: #666;
+}
+
+.breadcrumb a {
+    color: #333;
+    text-decoration: none;
+}
+
+.contact-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-image {
+    flex: 0 0 20%;
+}
+
+.contact-image img {
+    max-width: 100%;
+    border-radius: 15px;
+}
+/* Make the left dog image (handdog) appear to touch the form */
+.contact-image.left {
+    position: relative;
+    right: 0; /* Remove the -90px adjustment */
+    margin-right: -150px; /* Push the dog toward the form instead */
+    z-index: 2;
+}
+
+.contact-image.left img {
+    width: 550px; /* Increase size - adjust as needed */
+    height: 500px;
+    max-width: none;
+}
+
+/* Make the right cat image bigger */
+.contact-image.right {
+    position: relative;
+    left: 0; /* Remove the -90px adjustment */
+    /* Push the cat toward the form instead */
+    z-index: 2;
+}
+
+.contact-image.right img {
+    width: 600px; /* Make cat bigger - adjust as needed */
+    height: 600px;
+    margin-right:-30em; 
+    max-width: none;
+}
+.contact-form-container {
+    flex: 0 0 50%;
+    background-color: #c2a2fb;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    color: #fff;
+}
+
+.form-header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.form-header h3 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.form-header h2 {
+    font-family: 'Rubik', sans-serif;
+    font-size: 28px;
+    margin: 0;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    padding: 12px 15px;
+    border-radius: 5px;
+    border: none;
+    font-family: 'Arial', sans-serif;
+    font-size: 14px;
+}
+
+.contact-form textarea {
+    height: 120px;
+    resize: none;
+}
+
+/* Change the submit button style to match the schedule visit button */
+.submit-btn {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-top: 10px;
+    width: max-content;
+    align-self: center;
+}
+
+.submit-btn:hover {
+    background-color: white;
+    color: #c2a2fb; /* This matches the background color of your contact form */
+}
+
+/* Book Your Visit Section */
+.book-visit-section {
+    background-color: #7f51b0;
+    padding: 60px 0;
+    margin: 60px 0;
+}
+
+.book-visit-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.book-visit-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.book-visit-text {
+    flex: 0 0 50%;
+    color: white;
+    padding-right: 40px;
+}
+
+.book-visit-text h2 {
+    font-family: 'Rubik', sans-serif;
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.schedule-btn {
+    display: inline-block;
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    margin-top: 20px;
+    transition: all 0.3s;
+}
+
+.schedule-btn:hover {
+    background-color: white;
+    color: #7f51b0;
+}
+
+.book-visit-image {
+    flex: 0 0 45%;
+}
+
+.book-visit-image img {
+    max-width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer Section */
+.footer-section {
+    background-color: #FFF8E7;
+    padding: 60px 0 20px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.footer-columns {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.footer-column {
+    flex: 0 0 23%;
+}
+
+.footer-logo {
+    font-family: 'Dancing Script', cursive;
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background-color: #f0f0f0;
+    border-radius: 50%;
+    color: #666;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.social-icon:hover {
+    background-color: #7f51b0;
+    color: white;
+}
+
+.footer-column h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    color: #666;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+    color: #7f51b0;
+}
+
+.contact-info p {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 15px;
+    color: #666;
+}
+
+.contact-info i {
+    margin-right: 10px;
+    color: #7f51b0;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+    color: #888;
+    font-size: 14px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-links a {
+    color: #888;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: #7f51b0;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .contact-content {
+        flex-direction: column;
+    }
+    
+    .contact-image {
+        flex: 0 0 100%;
+        margin-bottom: 20px;
+    }
+    
+    .contact-form-container {
+        flex: 0 0 100%;
+        order: 2;
+    }
+    
+    .contact-image.right {
+        order: 3;
+        margin-top: 20px;
+    }
+    
+    .book-visit-content {
+        flex-direction: column;
+    }
+    
+    .book-visit-text {
+        flex: 0 0 100%;
+        padding-right: 0;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    
+    .book-visit-image {
+        flex: 0 0 100%;
+    }
+    
+    .footer-columns {
+        flex-wrap: wrap;
+    }
+    
+    .footer-column {
+        flex: 0 0 48%;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-column {
+        flex: 0 0 100%;
+    }
+    
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .footer-links {
+        margin-top: 10px;
+        justify-content: center;
+    }
+}
+/* Statistics Section Styles */
+.statistics-section {
+    background-color: #f6f3ea;
+    padding: 60px 0;
+    text-align: center;
+    margin-top: -60px; /* To remove gap with previous section */
+}
+
+.statistics-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.statistics-title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 42px;
+    color: #86588b;
+    margin-bottom: 40px;
+}
+
+.statistics-items {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.statistic-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+}
+
+.statistic-icon {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: visible; /* Change from hidden to visible */
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.statistic-icon:nth-child(1) {
+    background-color: #c9a0a0; /* Reddish brown for dogs */
+}
+
+.statistic-icon:nth-child(2) {
+    background-color: #f8e8a0; /* Yellow for cats */
+}
+
+.statistic-icon:nth-child(3) {
+    background-color: #e0bc76; /* Light brown for capacity */
+}
+
+.statistic-icon:nth-child(4) {
+    background-color: #c9a0a0; /* Reddish for adopted */
+}
+
+.statistic-icon img {
+    position: absolute;
+    width: 150%; /* Make image larger than container */
+    height: 150%;
+    object-fit: contain; /* Change from cover to contain */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the image */
+}
+/* Target specifically the first statistic item (dog) */
+.statistic-item:first-child .statistic-icon img {
+    width: 370%; /* Larger size just for the dog icon */
+    height: 370%;
+}
+.statistic-value {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 5px;
+}
+
+.statistic-label {
+    font-size: 16px;
+    color: #666;
+    margin-top: 5px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .statistics-items {
+        gap: 25px;
+    }
+    
+    .statistic-item {
+        width: 150px;
+    }
+    
+    .statistic-icon {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media (max-width: 576px) {
+    .statistics-items {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .statistic-item {
+        margin-bottom: 30px;
+    }
+}

@@ -12,6 +12,8 @@
 </head>
 
 <body>
+  <a href="Homepage.html" class="back-arrow">&#8592; Back</a>
+  
   <div id="header"></div>
   <div class="container" id="container">
     <div class="form-container sign-up">
@@ -25,14 +27,7 @@
         <input type="text" id="address" name="address" placeholder="Home Address" required>
         <input type="password" id="password" name="password" placeholder="Password" required>
         <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password" required>
-        <select id="petType" name="petType" required>
-          <option value="">Select a pet</option>
-          <option value="Dog">Dog</option>
-          <option value="Cat">Cat</option>
-          <option value="Rabbit">Rabbit</option>
-          <option value="Bird">Bird</option>
-          <option value="Other">Other</option>
-        </select>
+       
         <select id="experience" name="experience" required>
           <option value="">Do you have experience with pets?</option>
           <option value="First-time pet owner">First-time pet owner</option>
@@ -40,16 +35,15 @@
           <option value="Currently have pets">Currently have pets</option>
           <option value="Worked with animals">Worked with animals</option>
         </select>
-        <textarea id="homeSetup" name="homeSetup" placeholder="Describe your home setup (e.g., yard, apartment, other pets)" required></textarea>
-        <select id="commitment" name="commitment" required>
-          <option value="">Are you prepared for a long-term commitment?</option>
-          <option value="Yes, absolutely">Yes, absolutely</option>
-          <option value="Yes, but with concerns">Yes, but with concerns</option>
-          <option value="Not sure">Not sure</option>
+       
         </select>
         <button type="submit">Sign Up</button>
       </form>
     </div>
+
+
+
+
     <div class="form-container sign-in">
       <form>
         <h1>Sign In</h1>

@@ -1,0 +1,83 @@
+
+header {
+    background: #f6f3ea;
+    display: flex;
+    position: fixed;
+    z-index: 9999999999;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+    padding: 15px 50px;
+   border-bottom:1px solid rgb(210, 210, 210);
+}
+
+.logo {
+    font-size: 24px;
+    
+    font-family: "Rubik Spray Paint", system-ui;
+   
+}
+
+.highlight {
+    color: #7a3af9;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 50px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.LoginSignup-btn {
+    background: #7a50b6;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    order: 3;
+}
+.footprint{
+    width: 2em;
+    margin-top: -1.5em;
+    margin-left: -1.5em;
+}
+nav ul li a.active {
+    background: #9063cd;  /* Same color as "Contact us" button */
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav ul li a.active:hover {
+    background: #7a50b6; /* Darker shade on hover */
+}
+
+
+.scrolled {
+    background: rgba(246, 243, 234, 0.7); /* Transparent */
+    backdrop-filter: blur(10px); /* Blur effect */
+    transition: all 0.3s ease-in-out;
+}
