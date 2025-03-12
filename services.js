@@ -55,3 +55,49 @@ document.addEventListener("DOMContentLoaded", () => {
 
     console.log("✅ Paws scattered consistently!");
 });
+// Add this to your existing services.js file
+document.addEventListener("DOMContentLoaded", () => {
+    // Animate paw images on scroll
+    const pawImages = document.querySelectorAll('.paw-image');
+    
+    function isElementInViewport(el) {
+        const rect = el.getBoundingClientRect();
+        return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+    }
+    
+    function animatePawsOnScroll() {
+        pawImages.forEach(paw => {
+            if (isElementInViewport(paw) && !paw.classList.contains('animated')) {
+                paw.classList.add('animated');
+                paw.style.animation = 'bounce 1.5s ease';
+                
+                // Reset animation after it completes
+                setTimeout(() => {
+                    paw.style.animation = '';
+                }, 1500);
+            }
+        });
+    }
+    
+    // Add hover effect to paw images
+    pawImages.forEach(paw => {
+        paw.addEventListener('mouseenter', () => {
+            paw.style.animation = 'bounce 0.8s infinite ease-in-out';
+        });
+        
+        paw.addEventListener('mouseleave', () => {
+            paw.style.animation = '';
+        });
+    });
+    
+    // Listen for scroll events
+    window.addEventListener('scroll', animatePawsOnScroll);
+    
+    // Initial check on page load
+    animatePawsOnScroll();
+});
