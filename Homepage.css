@@ -673,13 +673,14 @@ footer {
 .contact-image.right {
     position: relative;
     left: 0; /* Remove the -90px adjustment */
-    margin-left: -90px; /* Push the cat toward the form instead */
+    /* Push the cat toward the form instead */
     z-index: 2;
 }
 
 .contact-image.right img {
-    width: 500px; /* Make cat bigger - adjust as needed */
-    height: 500px;
+    width: 600px; /* Make cat bigger - adjust as needed */
+    height: 600px;
+    margin-right:-30em; 
     max-width: none;
 }
 .contact-form-container {

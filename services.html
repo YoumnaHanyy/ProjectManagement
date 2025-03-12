@@ -1,0 +1,99 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Foster</title>
+    <link rel="stylesheet" href="services.css">
+    <link rel="stylesheet" href="NavBar.css">
+    <link rel="stylesheet" href="Homepage.css">
+    <script src="../pets/NavBar.js"></script>
+    <script src="services.js"></script>
+    <script src="Homepage.js"></script>
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bungee&family=Matemasie&family=Rubik+Spray+Paint&display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/freshener" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Caveat:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div id="navbar"></div>
+<script>
+    fetch("NavBar.html")
+        .then(response => response.text())
+        .then(data => document.getElementById("navbar").innerHTML = data);
+</script>
+
+<!-- Services Header Section -->
+<section class="services-header">
+    <div class="services-header-content">
+        <h1 class="services-titlee">Our</h1>
+        <h1 class="services-title">Services</h1>
+        
+    </div>
+    <div class="services-header-image">
+        <div class="blob-background"></div>
+        <img src="../pets/image.png" alt="Cat and Dog" class="pets-image">
+    </div>
+</section>
+
+<!-- Footer Section -->
+<footer class="footer-section">
+    <div class="footer-container">
+        <div class="footer-columns">
+            <div class="footer-column">
+                <h3 class="footer-logo">Pet Foster</h3>
+                <p>Follow us on our social Media Platforms and help make a difference.</p>
+                <div class="social-icons">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="#">Pet Visiting</a></li>
+                    <li><a href="#">Pet Grooming</a></li>
+                    <li><a href="#">Pet Veterinary</a></li>
+                    <li><a href="#">Pet Adoption</a></li>
+                    <li><a href="#">Volunteering</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Utility Pages</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Pets</a></li>
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Contact Us</h3>
+                <div class="contact-info">
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Anywhere street, Cairo, Egypt</p>
+                    <p><i class="fas fa-envelope"></i> petfoster@gmail.com</p>
+                    <p><i class="fas fa-phone"></i> 989 569 8520</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>©2025 — PetFoster</p>
+            <div class="footer-links">
+                <a href="#">Faq</a>
+                <a href="#">Terms & Conditions</a>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,107 @@
+@import url('navbar.css');
+@import url('https://fonts.cdnfonts.com/css/freshener');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap');
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f6f3ea;
+    overflow-x: hidden; /* Removes horizontal scrollbar */
+    display: flex;
+    flex-direction: column;
+}
+/* Services Header Section Styles */
+.services-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 5%;
+    background-color: #f5d7f4;
+    position: relative;
+    overflow: hidden;
+    margin-top: 80px; /* Adjust based on your navbar height */
+}
+.paw {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: url('../Pets/paw (2).png') no-repeat center/contain;
+    opacity: 0.8;
+}
+.services-header-content {
+    flex: 1;
+    position: relative;
+    z-index: 2;
+}
+
+.services-title {
+    font-family: "Rubik Spray Paint", system-ui;
+    font-size: 4.5rem;
+    color: #8A2BE2; /* Purple color */
+    margin-bottom: 1rem;
+    position: relative;
+}
+.services-titlee, .services-title {
+    position: relative; /* Enables moving the element */
+}
+
+/* Move the "Our" title */
+.services-titlee {
+    top: -25px; /* Move up */
+    left: 140px; /* Move right */
+    /* You can also try: right, bottom */
+}
+
+/* Move the "Services" title */
+.services-title {
+    top: 20px; /* Move down */
+    left: 300px; /* Move right */
+}
+
+.services-header-image {
+    flex: 1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.blob-background {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background-color: #8f329a; /* Lavender color */
+    border-radius: 50% 60% 40% 70% / 60% 40% 70% 50%;
+    z-index: 1;
+}
+
+.pets-image {
+    max-width: 90%;
+    position: relative;
+    z-index: 2;
+    top: 32px; /* Move down */
+
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .services-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .services-title {
+        font-size: 3.5rem;
+    }
+    
+    .services-header-image {
+        margin-top: 2rem;
+    }
+    
+    .blob-background {
+        width: 300px;
+        height: 300px;
+    }
+}
