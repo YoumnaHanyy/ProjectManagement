@@ -45,10 +45,30 @@
         <div class="category-item up">
             <div class="category-outer-ring">
                 <div class="category-image">
-                    <img src="../pets/pet-visit.png" alt="Pet Visiting">
+                    <img src="../pets/pet-care.png" alt="Pet volunteering">
                 </div>
             </div>
-            <p class="category-name">Pet Visiting</p>
+            <p class="category-name">Volunteering</p>
+        </div>
+        
+
+
+        <div class="category-item down">
+            <div class="category-outer-ring">
+                <div class="category-image">
+                    <img src="../pets/veterinary.png" alt="Pet veterinary">
+                </div>
+            </div>
+            <p class="category-name">Veterinary care</p>
+        </div>
+        
+        <div class="category-item up">
+            <div class="category-outer-ring">
+                <div class="category-image">
+                    <img src="../pets/icon-volunteer.png" alt="Pet Adoption">
+                </div>
+            </div>
+            <p class="category-name">Adoption</p>
         </div>
         
         <div class="category-item down">
@@ -63,28 +83,10 @@
         <div class="category-item up">
             <div class="category-outer-ring">
                 <div class="category-image">
-                    <img src="../pets/veterinary.png" alt="Pet Veterinary">
+                    <img src="../pets/pet-visit.png" alt="Volunteering">
                 </div>
             </div>
-            <p class="category-name">Veterinary care</p>
-        </div>
-        
-        <div class="category-item down">
-            <div class="category-outer-ring">
-                <div class="category-image">
-                    <img src="../pets/icon-volunteer.png" alt="Pet Adoption">
-                </div>
-            </div>
-            <p class="category-name">Adoption</p>
-        </div>
-        
-        <div class="category-item up">
-            <div class="category-outer-ring">
-                <div class="category-image">
-                    <img src="../pets/pet-care.png" alt="Volunteering">
-                </div>
-            </div>
-            <p class="category-name">Volunteering</p>
+            <p class="category-name">Rescuing</p>
         </div>
     </div>
 </section>
@@ -98,8 +100,8 @@
             </div>
             
             <div class="visiting-content">
-                <h2>Pet Visiting</h2>
-                <p>Our dedicated team provides loving care and attention to your pets in the comfort of their own home. Whether you're away for a day or a week, we ensure your furry friends receive the companionship, exercise, and care they need.</p>
+                <h2>Volunteering</h2>
+                <p>Our Pet Volunteering Service invites animal lovers to visit our adoption center and spend quality time with our furry friends. Whether it’s playing, cuddling, or helping with feeding, your time and love make a world of difference — bringing joy to the animals while they wait for their forever homes. Come share the love and make some new paw-some friends! </p>
                 <a href="#" class="visit-button">Schedule a Visit</a>
             </div>
             
@@ -107,6 +109,128 @@
                 <img src="../Pets/paw (3).png" alt="Paw Print" class="paw-image paw-height-3">
                 <img src="../Pets/paw (6).png" alt="Paw Print" class="paw-image paw-height-4">
             </div>
+        </div>
+    </div>
+
+<div id="visitModal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <h2>Schedule Your Visit</h2>
+        <form id="visitForm">
+            <div class="form-group">
+                <label for="fullName">Full Name</label>
+                <input type="text" id="fullName" name="fullName" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="age">Age</label>
+                <input type="number" id="age" name="age" min="18" max="120" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="visitDate">Visit Date</label>
+                <input type="date" id="visitDate" name="visitDate" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="visitTime">Visit Time</label>
+                <input type="time" id="visitTime" name="visitTime" required>
+            </div>
+            
+            <div class="form-group checkbox-group">
+                <label class="checkbox-container">
+                    <input type="checkbox" id="hasExperience" name="hasExperience">
+                    <span class="checkmark"></span>
+                    I have experience with animals
+                </label>
+            </div>
+            
+            <div class="form-group">
+                <label>I would like to visit:</label>
+                <div class="radio-options">
+                    <label class="radio-container">
+                        <input type="radio" name="petType" value="dogs" required>
+                        <span class="radio-checkmark"></span>
+                        Dogs
+                    </label>
+                    <label class="radio-container">
+                        <input type="radio" name="petType" value="cats">
+                        <span class="radio-checkmark"></span>
+                        Cats
+                    </label>
+                    <label class="radio-container">
+                        <input type="radio" name="petType" value="both">
+                        <span class="radio-checkmark"></span>
+                        Both
+                    </label>
+                </div>
+            </div>
+            
+            <div class="form-group submit-group">
+                <button type="submit" class="submit-button">Schedule Visit</button>
+            </div>
+            
+            <div id="formMessage" class="form-message"></div>
+        </form>
+    </div>
+</div>
+
+<!-- Veterinary Section -->
+<section class="pet-veterinary">
+    <div class="veterinary-container">
+        <h2 class="section-title">Veterinary Care</h2>
+        <p class="section-subtitle">Give your little friends the care they need</p>
+        
+        <div class="consultation-steps">
+            <!-- Curved connecting lines -->
+            <div class="connecting-line"></div>
+            
+            <div class="step-item">
+                <div class="step-icon">
+                    <img src="../Pets/chat.png" alt="Get in touch" class="icon-image">
+                </div>
+                <h3 class="step-title">Get in touch</h3>
+                <p class="step-description">Reach out to learn more about our veterinary services.</p>
+            </div>
+            
+            <div class="step-item">
+                <div class="step-icon">
+                    <img src="../Pets/calendar.png" alt="Schedule a visit" class="icon-image">
+                </div>
+                <h3 class="step-title">Schedule a visit</h3>
+                <p class="step-description">Book a time to bring your pet in for care.</p>
+            </div>
+            
+            <div class="step-item">
+                <div class="step-icon">
+                    <img src="../Pets/to-do-list.png" alt="Pet admission" class="icon-image">
+                </div>
+                <h3 class="step-title">Pet admission</h3>
+                <p class="step-description">Check your pet in for treatment or observation.</p>
+            </div>
+            
+            <div class="step-item">
+                <div class="step-icon">
+                    <img src="../Pets/home.png" alt="Take them home" class="icon-image">
+                </div>
+                <h3 class="step-title">Take them home</h3>
+                <p class="step-description">Bring your happy, healthy pet back home!</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Pet Adoption Section -->
+<section class="pet-adoption">
+    <div class="pet-adoption-container">
+        <div class="adoption-content">
+            <h2>Adoption</h2>
+            <p>Hi Human. You need <span class="highlight">Friends</span>?</p>
+            <p class="adoption-description">Try to adopt some pet. We will help you to choose and to pick the best pet for you. We recommend you to adopt rather than buy it.</p>
+            <a href="#" class="adoption-button">Step 1: Choose a Pet</a>
+        </div>
+        <div class="adoption-image">
+            <img src="../Pets/adopt-cat.png" alt="Cute Kitten" class="kitten-image">
         </div>
     </div>
 </section>
@@ -127,11 +251,10 @@
             <div class="footer-column">
                 <h3>Services</h3>
                 <ul>
-                    <li><a href="#">Pet Visiting</a></li>
+                    <li><a href="#">Volunteering</a></li>
                     <li><a href="#">Pet Grooming</a></li>
                     <li><a href="#">Pet Veterinary</a></li>
                     <li><a href="#">Pet Adoption</a></li>
-                    <li><a href="#">Volunteering</a></li>
                 </ul>
             </div>
             

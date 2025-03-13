@@ -333,3 +333,468 @@ html {
         margin-top: 10px; /* Reduced from 15px */
     }
 }
+
+/* Modal Styles - Add to your services.css file */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.modal.show {
+    display: block;
+    opacity: 1;
+}
+
+.modal-content {
+    background: linear-gradient(135deg, #fff 0%, #f5d7f4 100%);
+    margin: 5% auto;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 5px 25px rgba(143, 50, 154, 0.3);
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+    transform: translateY(-50px);
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+
+.modal.show .modal-content {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.close-modal {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    color: #8A2BE2;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.close-modal:hover {
+    color: #7a2984;
+}
+
+.modal h2 {
+    font-family: 'Dancing Script', cursive;
+    color: #8A2BE2;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #444;
+}
+
+.form-group input[type="text"],
+.form-group input[type="number"],
+.form-group input[type="date"],
+.form-group input[type="time"] {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #d8b6e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #8f329a;
+    box-shadow: 0 0 8px rgba(143, 50, 154, 0.3);
+}
+
+/* Checkbox styling */
+.checkbox-container, .radio-container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 1rem;
+    user-select: none;
+}
+
+.checkbox-container input, .radio-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark, .radio-checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 22px;
+    width: 22px;
+    background-color: #fff;
+    border: 2px solid #d8b6e0;
+    transition: all 0.2s;
+}
+
+.checkmark {
+    border-radius: 5px;
+}
+
+.radio-checkmark {
+    border-radius: 50%;
+}
+
+.checkbox-container:hover input ~ .checkmark,
+.radio-container:hover input ~ .radio-checkmark {
+    background-color: #f5e8f8;
+}
+
+.checkbox-container input:checked ~ .checkmark,
+.radio-container input:checked ~ .radio-checkmark {
+    background-color: #8A2BE2;
+    border-color: #8A2BE2;
+}
+
+.checkmark:after, .radio-checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.checkbox-container input:checked ~ .checkmark:after,
+.radio-container input:checked ~ .radio-checkmark:after {
+    display: block;
+}
+
+.checkbox-container .checkmark:after {
+    left: 7px;
+    top: 3px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.radio-container .radio-checkmark:after {
+    left: 7px;
+    top: 7px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+}
+
+.radio-options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.submit-group {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.submit-button {
+    padding: 12px 35px;
+    background-color: #8f329a;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #7a2984;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(143, 50, 154, 0.3);
+}
+
+.form-message {
+    text-align: center;
+    margin-top: 20px;
+    font-weight: 500;
+    height: 20px;
+}
+
+.form-message.success {
+    color: #28a745;
+}
+
+.form-message.error {
+    color: #dc3545;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .modal-content {
+        margin: 10% auto;
+        padding: 20px;
+        width: 85%;
+    }
+    
+    .modal h2 {
+        font-size: 1.8rem;
+    }
+    
+    .submit-button {
+        padding: 10px 30px;
+        font-size: 1rem;
+    }
+}
+
+/* Pet Adoption Section Styles */
+.pet-adoption {
+    padding: 3rem 0;
+    background-color: #f8f4ff;
+    position: relative;
+    overflow: hidden;
+    margin-top: 2rem;
+}
+
+.pet-adoption-container {
+    max-width: 1200px;
+    height: 350px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.adoption-content {
+    width: 50%;
+    padding: 1.5rem;
+}
+
+.adoption-content h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.5rem;
+    color: #8A2BE2;
+    margin-bottom: 1rem;
+}
+
+.adoption-content p {
+    color: #333;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.highlight {
+    color: #ff6b6b;
+}
+
+/* Add this specific styling for the adoption description */
+.adoption-description {
+    color: #444;
+    font-size: 0.5rem;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    font-weight: normal !important; /* Using !important to override any other rules */
+}
+.adoption-button {
+    display: inline-block;
+    padding: 12px 28px;
+    background-color: #8f329a;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    margin-top: 1.5rem; /* Add this line to create space above the button */
+
+}
+
+.adoption-button:hover {
+    background-color: #a43ab0;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(255, 107, 107, 0.3);
+}
+
+.adoption-image {
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.kitten-image {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .pet-adoption-container {
+        flex-direction: column-reverse;
+    }
+    
+    .adoption-content, .adoption-image {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .adoption-image {
+        margin-bottom: 1.5rem;
+    }
+    
+    .kitten-image {
+        max-width: 80%;
+    }
+}
+
+/* Veterinary Care Section Styles */
+.pet-veterinary {
+    padding: 5rem 0;
+    background-color: #f8f4ff;
+    position: relative;
+    overflow: hidden;
+    margin-top: 2rem;
+}
+
+.veterinary-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #8A2BE2;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+}
+
+.veterinary-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.section-subtitle {
+    color: #666;
+    font-size: 1rem;
+    margin-bottom: 4rem;
+}
+
+.consultation-steps {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    position: relative;
+    padding-top: 20px;
+}
+
+/* Add the curved connecting line */
+.connecting-line {
+    position: absolute;
+    top: 50px;
+    left: 15%;
+    width: 70%;
+    height: 2px;
+    z-index: 1;
+    background: none;
+    /* Create a curved line with CSS */
+    border-top: 2px solid #e0e0e0;
+    border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+}
+
+.step-item {
+    flex: 1;
+    min-width: 160px;
+    padding: 0 15px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.step-icon {
+    width: 60px;
+    height: 60px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 2;
+}
+
+.icon-image {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    filter: invert(26%) sepia(71%) saturate(2177%) hue-rotate(272deg) brightness(87%) contrast(92%);
+}
+
+.step-title {
+    font-family: 'Arial', sans-serif;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.step-description {
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .consultation-steps {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .step-item {
+        flex-basis: calc(50% - 40px);
+        margin-bottom: 30px;
+    }
+    
+    /* Hide the connecting line on mobile */
+    .connecting-line {
+        display: none;
+    }
+}
+
+@media (max-width: 576px) {
+    .step-item {
+        flex-basis: 100%;
+    }
+    
+    .veterinary-title {
+        font-size: 2rem;
+    }
+}
