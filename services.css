@@ -920,3 +920,109 @@ html {
         order: 2;
     }
 }
+
+/* Pet Rescuing Section Styles */
+.pet-rescuing {
+    padding: 4rem 0;
+    background-color: #f5e8f4; /* Light beige background similar to the image */
+    position: relative;
+    overflow: hidden;
+    margin-top: 2rem;
+}
+
+.rescuing-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-title-container {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.section-main-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #86588b;
+    margin-bottom: 1rem;
+    font-family: 'Dancing Script', cursive; 
+   text-align: center;
+}
+
+.rescuing-icons {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.icon-box {
+    flex: 1;
+    min-width: 200px;
+    background-color: #fff;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.icon-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.rescuing-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 1rem;
+}
+
+.icon-box h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.icon-box p {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+}
+
+.read-more {
+    display: inline-block;
+    font-size: 0.85rem;
+    color: #86588b; /* Orangeish color for the links */
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.read-more:hover {
+    color: #69326f;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .rescuing-icons {
+        justify-content: center;
+    }
+    
+    .icon-box {
+        flex-basis: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 576px) {
+    .icon-box {
+        flex-basis: 100%;
+    }
+    
+    .section-main-title {
+        font-size: 2rem;
+    }
+}
