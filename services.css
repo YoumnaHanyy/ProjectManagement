@@ -798,3 +798,125 @@ html {
         font-size: 2rem;
     }
 }
+/* Pet Grooming Section that replicates Image 1 */
+.pet-grooming {
+    padding: 4rem 0;
+    position: relative;
+    overflow: hidden;
+    margin-top: 2rem;
+}
+
+.grooming-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dog-image {
+    width: 25%;
+    height: 300px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.dog-image.left {
+    background-color: #b3cbb3; /* Light green background */
+}
+
+.dog-image.right {
+    background-color: #a378a3; /* Purple background */
+}
+
+.dog-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.grooming-content {
+    width: 45%;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.grooming-content h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3.8rem;
+    color: #86588b;
+    margin-bottom: 2rem;
+    line-height: 1.3;
+    font-weight: 500;
+}
+
+.try-free-button {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: white;
+    color: #333;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 500;
+    margin-bottom: 2rem;
+    border: 1px solid #ddd;
+    transition: all 0.3s ease;
+}
+
+.arrow-icon {
+    width: 24px;
+    height: 24px;
+    background-color: #e0a2fb; /* Yellow circle */
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+    font-size: 14px;
+    color: #333;
+}
+
+.service-tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.tag {
+    padding: 6px 12px;
+    background-color: #e9e9e9;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    color: #333;
+}
+
+.tag-highlight {
+    background-color: #fbc2eb; /* Yellow background */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .grooming-container {
+        flex-direction: column;
+    }
+    
+    .dog-image {
+        width: 80%;
+        margin-bottom: 2rem;
+    }
+    
+    .dog-image.right {
+        margin-top: 2rem;
+        order: 3;
+    }
+    
+    .grooming-content {
+        width: 100%;
+        order: 2;
+    }
+}
