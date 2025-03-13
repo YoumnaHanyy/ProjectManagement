@@ -1026,3 +1026,123 @@ html {
         font-size: 2rem;
     }
 }
+
+/* Pet Donation Section Styles - Much Shorter Height */
+.pet-donation {
+    padding: 0.01rem 0; /* Drastically reduced from original 1rem */
+    background-color: #f5f5f5;
+    position: relative;
+    overflow: hidden;
+    margin-top: 0.1rem;
+}
+
+.donation-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1px;
+}
+
+.donation-image {
+    width: 40%; /* Keeping the increased width for bigger dog image */
+    display: flex;
+    justify-content: flex-end;
+    /* Reducing height by constraining the image container */
+    max-height: 500px; /* Added explicit height constraint */
+    overflow: hidden;
+}
+
+.donation-image img {
+    width: 110%; 
+    max-width: 550px;
+    height: auto;
+    display: block;
+}
+
+.donation-content {
+    width: 45%;
+    padding-left: 10px;
+    /* Reducing height by condensing content */
+    max-height: 270px; /* Added explicit height constraint */
+}
+
+.donation-content h2 {
+    font-size: 1.7rem; /* Reduced from 2rem */
+    color: #333;
+    font-weight: 400;
+    margin-bottom: 0.5rem; /* Further reduced */
+    line-height: 1.2; /* Tightened line height */
+}
+
+.bank-label {
+    font-size: 0.8rem; /* Reduced */
+    color: #666;
+    margin-bottom: 0.2rem; /* Minimal margin */
+}
+
+.bank-info {
+    display: flex;
+    align-items: center;
+    background-color: #f1ccf4;
+    padding: 6px 12px; /* Reduced padding */
+    border-radius: 8px;
+    margin-bottom: 0.5rem; /* Further reduced */
+    width: fit-content;
+}
+
+.bank-info i {
+    margin-right: 8px;
+    color: #666;
+}
+
+.bank-info span {
+    font-size: 0.9rem; /* Reduced */
+    letter-spacing: 0.5px; /* Reduced */
+    color: #333;
+}
+
+.donation-note {
+    font-size: 0.75rem; /* Smaller text */
+    color: #999;
+    line-height: 1.2; /* Much tighter line spacing */
+    max-width: 450px;
+    max-height: 60px; /* Constrain height */
+    overflow-y: auto; /* Add scrolling if needed */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .pet-donation {
+        padding: 0.1rem 0; /* Even less padding on mobile */
+    }
+    
+    .donation-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .donation-image {
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 0.5rem; /* Minimal margin */
+        max-height: 200px; /* Even shorter on mobile */
+    }
+    
+    .donation-content {
+        width: 100%;
+        padding-left: 0;
+        max-height: none; /* Remove height constraint on mobile */
+    }
+    
+    .bank-info {
+        margin: 0 auto 0.5rem;
+    }
+    
+    .donation-note {
+        margin: 0 auto;
+        max-height: 50px; /* Shorter on mobile */
+    }
+}
