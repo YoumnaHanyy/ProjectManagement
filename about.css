@@ -17,68 +17,61 @@ h1, h2, h3, h4, h5, h6 {
     color: #6A0DAD;
 }
 
-/* Hero Section - Enhanced Creativity */
-.hero-section {
+/* About Us Section - Professional & Animated */
+.about-us-section {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 100px 10%;
-    background: linear-gradient(135deg, #FDE8CD, #F3E6FF);
+    padding: 80px 10%;
+    background: linear-gradient(135deg, #fef7e5, #f7edff);
     border-bottom: 5px solid #6A0DAD;
-    overflow: hidden;
     position: relative;
+    overflow: hidden;
 }
 
-/* Light Purple Floating Circles with Soft Animation */
-.hero-section::before, .hero-section::after {
+/* Soft Floating Animation */
+.about-us-section::before, .about-us-section::after {
     content: '';
     position: absolute;
-    width: 120px;
-    height: 120px;
-    background: rgba(106, 13, 173, 0.1);
+    width: 100px;
+    height: 100px;
+    background: rgba(106, 13, 173, 0.08);
     border-radius: 50%;
-    animation: floating 5s infinite ease-in-out alternate;
+    animation: floatEffect 6s infinite ease-in-out alternate;
 }
 
-.hero-section::before {
-    top: 15%;
-    left: 10%;
+.about-us-section::before {
+    top: 10%;
+    left: 5%;
 }
 
-.hero-section::after {
-    bottom: 10%;
-    right: 15%;
+.about-us-section::after {
+    bottom: 15%;
+    right: 10%;
 }
 
-@keyframes floating {
+@keyframes floatEffect {
     0% { transform: translateY(0); }
-    100% { transform: translateY(20px); }
+    100% { transform: translateY(15px); }
 }
 
-.hero-text-container {
-    max-width: 600px;
-    text-align: left;
-    animation: fadeIn 1.5s ease-in-out;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.hero-text-container h1 {
-    font-size: 4em;
-    font-weight: bold;
+/* About Us Header - Stylish and Professional */
+.about-us-header {
+    font-size: 3.5em;
+    font-weight: 700;
+    font-family: 'Playfair Display', serif;
     color: #6A0DAD;
     text-transform: uppercase;
-    letter-spacing: 2px;
-    font-family: 'Playfair Display', serif;
+    letter-spacing: 1.5px;
     position: relative;
-    order: 2; /* Moves the header below the paragraph */
-    margin-top: 20px;
+    opacity: 0;
+    animation: fadeInHeader 1.5s ease-in-out forwards;
 }
 
-.hero-text-container h1::after {
+/* Underline Effect */
+.about-us-header::after {
     content: '';
-    width: 60px;
+    width: 80px;
     height: 5px;
     background: #6A0DAD;
     position: absolute;
@@ -88,20 +81,27 @@ h1, h2, h3, h4, h5, h6 {
     animation: lineExpand 1s ease-in-out;
 }
 
-@keyframes lineExpand {
-    from { width: 0; }
-    to { width: 60px; }
+@keyframes fadeInHeader {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
-.hero-text-container p {
-    font-size: 1.2em;
+@keyframes lineExpand {
+    from { width: 0; }
+    to { width: 80px; }
+}
+
+/* About Us Paragraph - Creative Font & Smooth Animation */
+.about-us-text {
+    max-width: 600px;
+    font-size: 1.3em;
     line-height: 1.8;
     color: #4A4A4A;
     font-weight: 500;
     font-family: 'Raleway', sans-serif;
+    text-align: left;
     opacity: 0;
-    animation: fadeInText 1.5s ease-in-out forwards;
-    order: 1; /* Moves the paragraph above the header */
+    animation: fadeInText 1.5s ease-in-out forwards 0.5s;
 }
 
 @keyframes fadeInText {
@@ -109,37 +109,14 @@ h1, h2, h3, h4, h5, h6 {
     to { opacity: 1; transform: translateY(0); }
 }
 
-.hero-highlight {
-    color: #6A0DAD;
-    font-weight: bold;
-    font-size: 1.5em;
-}
-
-.cta-button {
-    background: #6A0DAD;
-    color: white;
-    padding: 15px 30px;
-    font-size: 1.2em;
-    border-radius: 30px;
-    text-decoration: none;
-    font-weight: bold;
-    display: inline-block;
-    margin-top: 20px;
-    transition: all 0.3s ease;
-}
-
-.cta-button:hover {
-    background: #50258d;
-    transform: scale(1.05);
-}
-
-.hero-images {
+/* Enhanced Image Styling */
+.about-us-images {
     display: flex;
     gap: 20px;
-    animation: fadeIn 2s ease-in-out;
+    animation: fadeInImages 2s ease-in-out;
 }
 
-.hero-images img {
+.about-us-images img {
     width: 180px;
     height: 180px;
     object-fit: cover;
@@ -149,12 +126,11 @@ h1, h2, h3, h4, h5, h6 {
     border: 5px solid white;
 }
 
-.hero-images img:hover {
+.about-us-images img:hover {
     transform: scale(1.1);
 }
 
-/* Animations */
-@keyframes fadeIn {
+@keyframes fadeInImages {
     0% { opacity: 0; transform: translateY(-20px); }
     100% { opacity: 1; transform: translateY(0); }
 }
